@@ -1,0 +1,431 @@
+<!DOCTYPE html>
+html
+	head
+		meta(charset="UTF-8")
+		title List
+		link(rel="stylesheet", href="css/bootstrap-reboot.min.css")
+		link(rel="stylesheet", href="css/main.css")
+	body
+		header
+			h2(class="item") 
+				a(href="index.html") Лучшие аниме
+			h2(class="item topic")
+				a(href="list.html") Список аниме
+		details
+			summary График
+			form
+				table(cellspacing="10")
+					tbody
+						tr
+							td(valign="top")
+								legend
+									strong Значение по оси OХ
+								input(type="radio" name="ox" value="жанр")
+								|Жанр
+								br
+								input(type="radio" name="ox" value="рейтинг")
+								|Рейтинг на shikimori
+							td(valign="top")
+								legend 
+									strong Результат
+								input(type="checkbox" name="result" value="макс")
+								|Максимальный рейтинг
+								br
+								input(type="checkbox" name="result" value="мин")
+								|Минимальный рейтинг
+								br
+								input(type="checkbox" name="result" value="колво")
+								|Количество аниме
+			input(type="button" value="Построить")
+		details 
+			summary Фильтр
+			form
+				table 
+					tbody 
+						tr 
+							td Название
+							td 
+								input(type="text" id=name placeholder="Введите название")
+						tr 
+							td Жанр:
+							td 
+								input(type="text" id=genre placeholder="Введите жанр")
+						tr 
+							td Возрастной рейтинг:
+							td 
+								input(type="text" id=vozrate placeholder="Введите возрастной рейтинг")
+						tr 
+							td Год (от):
+							td input(type="number" min="1920" max="2022" id=year1 placeholder="Введите год")
+						tr 
+							td Год (до):
+							td
+								input(type="number" min="1920" max="2022" id=year2 placeholder="Введите год")
+						tr
+							td Рейтинг (до):
+							td 
+								input(type="number" min="1" max="10" step="0.1" id=rate2 placeholder="Введите рейтинг")
+			input(type="button" value="Найти")
+		details 
+			summary Сортировка
+			form 
+				table 
+					tr
+						td Первый уровень:
+						td 
+							select
+								option(value="0") Название
+								option(value="1") Год выхода
+								option(value="2") Рейтинг на shikimori
+								option(value="3") Возрастной рейтинг
+								option(value="4") Жанр
+						td по убыванию?
+						td 
+							input(type="checkbox" name="ack1" value="ack1")
+					tr 
+						td Второй уровень:
+						td
+							select 
+								option(value="0") Название
+								option(value="1") Год выхода
+								option(value="2") Рейтинг на shikimori
+								option(value="3") Возрастной рейтинг
+								option(value="4") Жанр
+						td по убыванию?
+						td
+							input(type="checkbox" name="ack2" value="ack2")
+					tr 
+						td Третий уровень:
+						td select 
+								option(value="0") Название
+								option(value="1") Год выхода
+								option(value="2") Рейтинг на shikimori
+								option(value="3") Возрастной рейтинг
+								option(value="4") Жанр
+						td по убыванию?
+						td 
+							input(type="checkbox" name="ack2" value="ack2")
+				input(type="button" value="Сортировать")
+		table(class="new" border="1" width="80%" cellpadding="0" cellspacing="0")
+			tr 
+				td Название
+				td Год выхода
+				td Рейтинг на shikimori
+				td Возрастной рейтинг
+				td Жанр
+			tr
+				td Стальной алхимик
+				td 2009
+				td 9.12
+				td R-17
+				td Сёнен
+			tr 
+				td Врата Штейна
+				td 2011
+				td 9.08
+				td PG-13
+				td Психологическое
+			tr 
+				td Госпожа Кагуя
+				td 2022
+				td 9.10
+				td PG-13
+				td Сэйнэн
+			tr 
+				td Гинтама 4
+				td 2015
+				td 9.08
+				td PG-13
+				td Сёнен
+			tr 
+				td Реинкарнация безработного
+				td 2021
+				td 8.37
+				td R-17
+				td Этти
+			tr 
+				td Врата Штейна
+				td 2011
+				td 9.08
+				td PG-13
+				td Психологическое
+			tr 
+				td Берсерк
+				td 1997
+				td 8.55
+				td R+
+				td Сэйнэн
+			tr 
+				td Глейпнир
+				td 2020
+				td 7.01
+				td R-17
+				td Этти
+			tr 
+				td Ярко-красная операция
+				td 2013
+				td 6.45
+				td R+
+				td Этти
+			tr 
+				td Ван-Пис
+				td 1999
+				td 8.63
+				td PG-13
+				td Сёнен
+			tr 
+				td Банановая рыба
+				td 2018
+				td 8.51
+				td R-17
+				td Сёдзё
+			tr 
+				td Нана
+				td 2006
+				td 8.5
+				td R+
+				td Сёдзё
+			tr 
+				td Красавица-воин Сейлор Мун: Сейлор-звезды
+				td 1996
+				td 7.93
+				td PG-13
+				td Сёдзё
+			tr 
+				td Семья шпиона
+				td 2022
+				td 8.75
+				td PG-13
+				td Комедия
+			tr 
+				td Крутой учитель Онидзука
+				td 1999
+				td 8.69
+				td R-17
+				td Комедия
+			tr 
+				td Моб Психо 100
+				td 2019
+				td 8.81
+				td PG-13
+				td Комедия
+			tr 
+				td Ковбой Бибоп
+				td 1998
+				td 8.77
+				td R+
+				td Экшен
+			tr 
+				td Блич: Тысячелетняя кровавая война
+				td 2022
+				td 9.07
+				td R-17
+				td Сёнен
+			tr 
+				td Киберпанк: Бегущие по краю
+				td 2022
+				td 8.7
+				td R+
+				td Экшен
+			tr 
+				td Невероятное приключение ДжоДжо: Золотой ветер
+				td 2018
+				td 8.58
+				td R-17
+				td Экшен
+			tr 
+				td Человек-бензопила
+				td 2022
+				td 8.88
+				td R-17
+				td Сёнен
+			tr 
+				td Пинг-понг
+				td 2014
+				td 8.62
+				td PG-13
+				td Сэйнэн
+			tr 
+				td Унесённые призраками
+				td 2001
+				td 8.79
+				td PG
+				td Приключения
+			tr 
+				td Небесный замок Лапута
+				td 1986
+				td 8.27
+				td PG
+				td Приключения
+			tr 
+				td Волшебное лето
+				td 2007
+				td 7.52
+				td PG
+				td Сёнен
+			tr 
+				td Принцесса Мононоке
+				td 1997
+				td 8.69
+				td PG-13
+				td Приключения
+			tr 
+				td Восемьдесят шесть
+				td 2021
+				td 8.71
+				td R-17
+				td Экшен
+			tr 
+				td Ходячий замок
+				td 2004
+				td 8.66
+				td G
+				td Приключения
+			tr 
+				td Мастер муси
+				td 2005
+				td 8.68
+				td PG-13
+				td Сэйнэн
+			tr 
+				td Золотой парень
+				td 1995
+				td 8.02
+				td R+
+				td Этти
+			tr 
+				td Волчьи дети Амэ и Юки
+				td 2012
+				td 8.61
+				td G
+				td Фэнтези
+			tr 
+				td В лес, где мерцают светлячки
+				td 2011
+				td 8.33
+				td G
+				td Сёдзё
+			tr 
+				td Мой сосед Тоторо
+				td 1988
+				td 8.27
+				td G
+				td Приключения
+			tr 
+				td Вайолет Эвергарден
+				td 2018
+				td 8.66
+				td PG-13
+				td Фэнтези
+			tr 
+				td Рейтинг короля
+				td 2021
+				td 8.59
+				td PG-13
+				td Фэнтези
+			tr 
+				td Мононокэ
+				td 2007
+				td 8.43
+				td R-17
+				td Сэйнэн
+			tr 
+				td Навсикая из Долины ветров
+				td 2007
+				td 8.37
+				td PG-13
+				td Фэнтези
+			tr 
+				td О моём перерождении в слизь
+				td 2021
+				td 8.32
+				td PG-13
+				td Экшен
+			tr 
+				td Монстр
+				td 2004
+				td 8.83
+				td R+
+				td Сэйнэн
+			tr 
+				td Евангелион нового поколения
+				td 1997
+				td 8.54
+				td R+
+				td Психологическое
+			tr 
+				td Психопаспорт
+				td 2012
+				td 8.36
+				td R-17
+				td Психологическое
+			tr 
+				td Идеальная грусть
+				td 1998
+				td 8.53
+				td R+
+				td Психологическое
+			tr 
+				td Добро пожаловать в NHK
+				td 2006
+				td 8.32
+				td R+
+				td Комедия
+			tr 
+				td Ванпанчмен
+				td 2015
+				td 8.51
+				td R-17
+				td Комедия
+			tr 
+				td Юная революционерка Утэна
+				td 1997
+				td 8.18
+				td PG-13
+				td Сёдзё
+			tr 
+				td Юная революционерка Утэна
+				td 1997
+				td 8.18
+				td PG-13
+				td Сёдзё
+			tr 
+				td Бьюти-блогер
+				td 2018
+				td 6.74
+				td PG-13
+				td Сёдзё
+			tr 
+				td Сага о Винланде
+				td 2019
+				td 8.73
+				td R-17
+				td Сэйнэн
+			tr 
+				td Наруто
+				td 2002
+				td 7.97
+				td PG-13
+				td Сёнен
+			tr 
+				td Чёрный клевер
+				td 2017
+				td 8.13
+				td PG-13
+				td Сёнен
+			tr 
+				td Моя геройская академия
+				td 2016
+				td 7.93
+				td PG-13
+				td Сёнен
+			tr 
+				td Волейбол!!
+				td 2014
+				td 8.46
+				td PG-13
+				td Сёнен
+
+
+
+

@@ -1,0 +1,110 @@
+body.cool {
+  display: flex;
+  flex-wrap: wrap;
+  font-family: Aboreto;
+  background-color: #660;
+}
+body.cool p a img:hover {
+  background: LightGrey;
+  width: 210px;
+  height: 210px;
+}
+body {
+  font-family: Aboreto;
+  display: flex-inline;
+  background-color: #660;
+}
+body p a img:hover {
+  background: LightGrey;
+  width: 210px;
+  height: 210px;
+}
+header {
+  width: 100%;
+  background-color: #660;
+  color: #000;
+  justify-content: center;
+}
+header h2 {
+  display: inline-block;
+  padding: 10;
+  margin: 0 2;
+}
+header h2 a {
+  text-decoration: none !important;
+  color: #f00;
+  margin: 5;
+  padding: 5;
+}
+header h2 a:hover {
+  text-decoration: overline !important;
+  font-size: 1.1em;
+}
+header .item {
+  color: #f00;
+  background-color: #f5f5f5;
+}
+header .topic {
+  background-color: #eeeed4;
+}
+@media (max-width: 600px) {
+  header h2 {
+    font-size: 0.9em;
+  }
+  header h2 a {
+    margin: 2px;
+  }
+  article {
+    width: 100%;
+  }
+  article p {
+    font-size: 0.8em;
+  }
+  article p strong {
+    font-size: 0.5em;
+  }
+  p img {
+    display: block;
+  }
+  img.naruto {
+    width: 350px;
+    height: 300px;
+  }
+  details {
+    font-size: 0.7em;
+  }
+  table {
+    font-size: 0.7em;
+  }
+}
+arcticle {
+  width: 70%;
+  background-color: #660;
+}
+arcticle img {
+  float: left;
+  margin: 0 5;
+}
+img {
+  display: inline-block;
+  width: 200px;
+  min-width: 200px;
+  height: 200px;
+  min-height: 200px;
+  margin: 10px;
+}
+.naruto {
+  display: flex;
+  float: center;
+  width: 450px;
+  min-width: 200px;
+  height: 400px;
+  min-height: 200px;
+  margin: 5px;
+}
+details summary {
+  margin: 5px;
+}
+.new {
+  min-width: 400px;
+}
